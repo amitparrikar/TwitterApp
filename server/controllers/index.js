@@ -4,16 +4,10 @@
 
 var express = require('express'),
     router = express.Router();
-
 /**
  * Configure all the routes here
  */
-//router.use('/twitter', require('./twitter'));
-
-
-
-
-
+router.use('/twitter', require('./twitter'));
 
 
 

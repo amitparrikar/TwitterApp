@@ -33,6 +33,13 @@ var config = {
         port: 4000,
         sessionTimeout: 1000*15,
         logLevel: 'debug'
+    },
+    twitterConfig: {
+        "consumerKey": "YOUR_CONSUMER_KEY",
+        "consumerSecret": "YOUR_CONSUME_SECRET",
+        "accessToken": "YOUR_ACCESS_TOKEN",
+        "accessTokenSecret": "YOUR_ACCESS_TOKEN_SECRET",
+        "port": "7890"
     }
 }
 

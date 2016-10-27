@@ -37,6 +37,15 @@ if(cluster.isMaster){
     //It's a Worker process
     var app = express();
 
+
+    var twitterProxy = require('twitter-proxy');
+    twitterProxy({
+        "consumerKey": "4mZPugMl5Pr2c3lxmPk6QG4Wv",
+        "consumerSecret": "qPt97wViB3wDJ7sEdmDcYU7qDTLparpO0bsE9fIpm6O2twovlb"
+    });
+
+
+
     require('./config/express')(app, config);
 
     app.listen(config.port, function(){
