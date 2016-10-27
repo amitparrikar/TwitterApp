@@ -1,0 +1,19 @@
+{
+  "name": "twitterappserver",
+  "version": "1.0.0",
+  "description": "API backend using nodeJS + expressJS for Twitter App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.13.3",
+    "winston": "2.1.1",
+    "twitter-proxy": "^2.0.0"
+  },
+  "author": "Amit Parrikar",
+  "license": "ISC"
+}
+
