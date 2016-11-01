@@ -1,0 +1,66 @@
+.twt-flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px 1px lightgray;
+
+}
+.twt-avatar img{
+    margin: 5px;
+    border-radius: 8px;
+    width: 45px;
+}
+.twt-message{
+    flex-grow: 2;
+    padding-right: 10px;
+}
+
+.twt-msg-header{
+    text-align: left;
+    padding-left: 5px;
+}
+.twt-msg-header .screen-name{
+    font-weight: bold;
+}
+.twt-msg-header .username{
+    font-size: 10px;
+    color: gray;
+}
+
+.twt-msg-footer{
+    text-align: left;
+    margin-top: 10px;
+}
+.twt-msg-footer span{
+    margin-right: 20px;
+}
+
+.twt-msg-media img{
+    width: 100%;
+    border-radius:5px;
+}
+
+.twt-msg-media video{
+    width: 100%;
+    border-radius:5px;
+}
+
+.twt-msg-text{
+    text-align: left;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.twt-msg-text a{
+    color: #0084B4;
+    font-size: 15px;
+}
+
+.retwit-color:hover{
+    color: #00C200;
+}
+.fav-color:hover{
+    color: orangered;
+}

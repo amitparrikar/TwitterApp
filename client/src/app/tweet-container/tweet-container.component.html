@@ -1,0 +1,33 @@
+<div class="twt-flex-container">
+    <div class="twt-avatar">
+        <img src="{{tweet?.displayAvatar}}" alt="">
+    </div>
+    <div class="twt-message">
+        <div class="twt-msg-header">
+            <span class="screen-name">{{tweet?.displayName}}</span>
+            <span class="username">@{{tweet?.displayScreenName}} - 9h</span>
+        </div>
+        <div class="twt-msg-text" [innerHTML]="tweet?.tweetText | tweetText">
+        </div>
+        <!--<iframe width="100%" src="http://www.hindustantimes.com/punjab/berths-vacant-yet-people-paying-up-to-50-more-for-shatabdi-seat/story-4bC5Aa89qa64h4gVjlp78L.html" frameborder="0"></iframe>-->
+        <div class="twt-msg-media" *ngIf="tweet?.mediaImages.length">
+            <img src="{{tweet?.mediaImages[0]}}" alt="">
+        </div>
+        <div class="twt-msg-media" *ngIf="tweet?.mediaVideos.length">
+            <video controls poster="{{tweet?.mediaVideos[0].videoThumbnail}}" >
+                <source src="{{tweet?.mediaVideos[0].videoUrl}}" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="twt-msg-footer">
+            <span class="retwit-color">
+                <i class="material-icons mdl-list__item-icon retwit-color">reply all</i>
+                {{tweet?.retweetCount}}
+            </span>
+            <span class="fav-color">
+                <i class="material-icons mdl-list__item-icon fav-color">favorite</i>
+                {{tweet?.favoriteCount}}
+            </span>
+        </div>
+    </div>
+</div>
