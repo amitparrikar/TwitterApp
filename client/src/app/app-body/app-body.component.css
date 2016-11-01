@@ -12,7 +12,6 @@
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
 }
-
 .flex-item {
     border: 1px solid #e7e7e7;
     border-radius: 5px;
@@ -20,10 +19,6 @@
     width: 400px;
     margin-top: 10px;
     text-align: center;
+    background-color: white;
+    cursor: pointer;
 }
-
-/*
-.flex-container > * {
-    padding: 0px;
-    margin: 0px;
-}*/

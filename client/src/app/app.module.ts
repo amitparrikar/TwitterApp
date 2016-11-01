@@ -11,6 +11,7 @@ import { AppBodyComponent } from './app-body/app-body.component';
 import { TweetContainerComponent } from './tweet-container/tweet-container.component';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetTextPipe } from './pipes/tweet-text.pipe';
+import { SharedService } from "./services/shared.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { TweetTextPipe } from './pipes/tweet-text.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
