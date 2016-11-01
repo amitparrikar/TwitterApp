@@ -1,6 +1,3 @@
 <ul class="flex-container">
-    <li [twt-tweet-list]="AppDirect" class="flex-item"></li>
-    <li [twt-tweet-list]="CDKGlobal" class="flex-item"></li>
-    <li [twt-tweet-list]="AppDirect" class="flex-item"></li>
-    <li [twt-tweet-list]="CDKGlobal" class="flex-item"></li>
+    <li [twt-tweet-list]="screenName" [attr.data-screenName]="screenName" class="flex-item" *ngFor="let screenName of screenNames"></li>
 </ul>

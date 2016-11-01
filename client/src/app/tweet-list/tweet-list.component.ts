@@ -15,7 +15,7 @@ export class TweetListComponent implements OnInit {
     constructor(private twitterService: TwitterService) { }
 
     ngOnInit() {
+
         this.twitterData = this.twitterService.getTwitterData(30, this.screenName);
     }
-
 }

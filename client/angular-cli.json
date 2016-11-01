@@ -15,9 +15,14 @@
       "prefix": "twt",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "./assets/css/custom-app.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/lib/material.min.js",
+        "./assets/lib/jquery-1.12.4.min.js",
+        "./assets/lib/jquery-ui.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

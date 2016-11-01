@@ -9,7 +9,6 @@
         </div>
         <div class="twt-msg-text" [innerHTML]="tweet?.tweetText | tweetText">
         </div>
-        <!--<iframe width="100%" src="http://www.hindustantimes.com/punjab/berths-vacant-yet-people-paying-up-to-50-more-for-shatabdi-seat/story-4bC5Aa89qa64h4gVjlp78L.html" frameborder="0"></iframe>-->
         <div class="twt-msg-media" *ngIf="tweet?.mediaImages.length">
             <img src="{{tweet?.mediaImages[0]}}" alt="">
         </div>

@@ -66,7 +66,7 @@ export class TweetContainerComponent implements OnInit {
 
         this.tweet = new TweetItem(accountName, displayAvatar, displayName, displayScreenName, isRetweeted, tweetText, mediaImages, mediaVideos, retweetCount, favoriteCount);
 
-        console.log(this.tweet);
+        //console.log(this.tweet);
 
     }
 
