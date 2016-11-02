@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {SharedService} from "../services/shared.service";
+import {ThemeSelectorService} from "../services/theme-selector.service";
 
 declare var $: any;
 
 @Component({
-  selector: '[twt-drawer]',
-  templateUrl: './drawer.component.html',
-  styleUrls: ['./drawer.component.css']
+    selector: '[twt-drawer]',
+    templateUrl: './drawer.component.html',
+    styleUrls: ['./drawer.component.css'],
+    providers: [ThemeSelectorService]
 })
 export class DrawerComponent implements OnInit {
 
@@ -17,12 +19,31 @@ export class DrawerComponent implements OnInit {
         tweetCount: 20,
         dateFrom: "",
         dateTo: "",
+        theme: 'indigo-pink.min.css'
     };
 
-    constructor(private sharedService: SharedService) { }
+    constructor(private sharedService: SharedService, private themeSelectorService: ThemeSelectorService) { }
 
     ngOnInit() {
-        let settings = JSON.parse(this.sharedService.getAllSettings());
+
+        this.loadSettings();
+
+        $("#dateFrom").datepicker({
+            onSelect: (date) => {
+                this.settings.dateFrom = date;
+            }
+        });
+
+        $("#dateTo").datepicker({
+            onSelect: (date) => {
+                this.settings.dateTo = date;
+            },
+            maxDate: new Date()
+        });
+    }
+
+    loadSettings(){
+        let settings = this.sharedService.getAllSettings();
         this.screenNames = this.sharedService.getAllScreenNames();
 
         this.settings.dateFrom = new Date();
@@ -39,19 +60,9 @@ export class DrawerComponent implements OnInit {
         if(settings.tweetCount){
             this.settings.tweetCount = settings.tweetCount;
         }
-
-        $("#dateFrom").datepicker({
-            onSelect: (date) => {
-                this.settings.dateFrom = date;
-            }
-        });
-
-        $("#dateTo").datepicker({
-            onSelect: (date) => {
-                this.settings.dateTo = date;
-            },
-            maxDate: new Date()
-        });
+        if(settings.theme){
+            this.settings.theme = settings.theme;
+        }
     }
 
     removeScreenName(itemIndex){
@@ -59,14 +70,24 @@ export class DrawerComponent implements OnInit {
         this.sharedService.saveAllScreenNames(this.screenNames);
     }
 
-    addScreenName(screenName: string){
+    addScreenName(event, screenName){
+
         if(this.screenNames.indexOf(screenName) === -1){
             this.screenNames.push(screenName);
             this.sharedService.saveAllScreenNames(this.screenNames);
         }
+        event.preventDefault();
     }
 
     onSubmit(form: NgForm){
         this.sharedService.saveAllSettings(form.value);
+
+        this.loadTheme();
+    }
+
+    loadTheme(){
+
+        this.themeSelectorService.setTheme(this.settings.theme);
+        window.location.href = window.location.origin;
     }
 }

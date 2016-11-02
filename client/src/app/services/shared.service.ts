@@ -13,7 +13,7 @@ export class SharedService {
         }
 
         if(!this.getLocalStorageItem('settings')){
-            this.saveAllSettings({tweetCount: 20, dateFrom: "", dateTo: ""});
+            this.saveAllSettings({tweetCount: 20, dateFrom: "", dateTo: "", theme: "indigo-pink.min.css"});
         }
     }
 
@@ -27,7 +27,7 @@ export class SharedService {
     }
 
     getAllSettings(){
-        return this.getLocalStorageItem('settings');
+        return JSON.parse(this.getLocalStorageItem('settings'));
     }
 
     saveAllSettings(settings: any){

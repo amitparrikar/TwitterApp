@@ -45,3 +45,7 @@
 .ui-datepicker-unselectable{
     opacity: 0.3;
 }
+
+.clear-both{
+    clear: both;
+}

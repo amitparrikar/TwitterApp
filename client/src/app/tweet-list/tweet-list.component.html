@@ -4,4 +4,5 @@
     <span class="twt-list-sub-title">{{twitterData[0]?.user?.followers_count}} Followers</span>
 
 </div>
-<twt-tweet-container *ngFor="let tweetItem of twitterData"  [tweetItem]="tweetItem"></twt-tweet-container>
+<div class="mdl-spinner mdl-js-spinner is-active" *ngIf="twitterData.length === 0"></div>
+<twt-tweet-container *ngFor="let tweetItem of twitterData | tweetSetting: appSettings.tweetCount : appSettings.dateFrom : appSettings.dateTo"  [tweetItem]="tweetItem"></twt-tweet-container>

@@ -1,5 +1,5 @@
 
-<div class="mdl-layout-title twt-drawer-header">
+<div class="mdl-layout-title mdl-color--accent twt-drawer-header">
     <span>Settings Panel</span>
     <i class="material-icons mdl-list__item-icon">settings</i>
 </div>
@@ -22,9 +22,27 @@
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input ngModel name="screenName" #screenName (keyup.enter)="addScreenName(screenName.value); screenName.value = ''" class="mdl-textfield__input" type="text" id="screenName">
+            <select [ngModel]="settings.theme" name="theme" class="mdl-textfield__input" id="themeSelect">
+                <option value="indigo-pink.min.css">Default Blue</option>
+                <option value="grey-orange.min.css">Gray Orange</option>
+                <option value="light_blue-cyan.min.css">Blue Cyan</option>
+                <option value="brown-orange.min.css">Brown Orange</option>
+                <option value="orange-light_green.min.css">Orange Green</option>
+                <option value="light_green-orange.min.css">Green Orange</option>
+            </select>
+            <label class="mdl-textfield__label" for="themeSelect">Select theme</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input ngModel name="screenName" #screenName class="mdl-textfield__input" type="text" id="screenName">
             <label class="mdl-textfield__label" for="screenName">Add a screen name</label>
         </div>
+
+        <button (click)="addScreenName($event, screenName.value); screenName.value = ''" class="twt-add-screenName mdl-button--raised mdl-button--colored">
+            Add
+        </button>
+
+        <div class="clear-both"></div>
 
         <div>
             <span class="mdl-chip mdl-chip--deletable" *ngFor="let screenName of screenNames; let i = index">

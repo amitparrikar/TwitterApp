@@ -11,6 +11,8 @@
 
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
+
+    background-image: url(./../../assets/css/new_year_background.png);
 }
 .flex-item {
     border: 1px solid #e7e7e7;
@@ -21,4 +23,5 @@
     text-align: center;
     background-color: white;
     cursor: pointer;
+    height: 100%;
 }
