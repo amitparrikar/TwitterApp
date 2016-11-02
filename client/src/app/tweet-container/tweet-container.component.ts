@@ -22,6 +22,7 @@ export class TweetContainerComponent implements OnInit {
     }
 
     formatTweetItem(data: any){
+
         let accountName, displayAvatar, displayName, displayScreenName, isRetweeted, tweetText, retweetCount, favoriteCount;
         let mediaImages: string[] = [], mediaVideos: MediaVideo[] = [];
 

@@ -68,3 +68,15 @@
 .fav-color:hover{
     color: orangered;
 }
+
+.twt-is-retweeted{
+    color: #00C200;
+    font-size: 15px;
+    float: right;
+    margin: 5px 0px 0px 0px;
+}
+.twt-is-retweeted-container{
+    text-align: left;
+    font-size: 10px;
+    color: gray;
+}

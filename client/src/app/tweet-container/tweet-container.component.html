@@ -1,8 +1,12 @@
 <div class="twt-flex-container">
     <div class="twt-avatar">
+        <i *ngIf="tweet?.isRetweeted" class="material-icons mdl-list__item-icon twt-is-retweeted">transform</i>
         <img src="{{tweet?.displayAvatar}}" alt="">
     </div>
     <div class="twt-message">
+        <div *ngIf="tweet?.isRetweeted" class="twt-is-retweeted-container">
+            <span>{{tweet?.accountName}} Retweeted</span>
+        </div>
         <div class="twt-msg-header">
             <span class="screen-name">{{tweet?.displayName}}</span>
             <span class="username">@{{tweet?.displayScreenName}} - 9h</span>
@@ -20,7 +24,7 @@
         </div>
         <div class="twt-msg-footer">
             <span class="retwit-color">
-                <i class="material-icons mdl-list__item-icon retwit-color">reply all</i>
+                <i class="material-icons mdl-list__item-icon retwit-color">transform</i>
                 {{tweet?.retweetCount}}
             </span>
             <span class="fav-color">
