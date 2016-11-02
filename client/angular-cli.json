@@ -15,8 +15,7 @@
       "prefix": "twt",
       "mobile": false,
       "styles": [
-        "styles.css",
-        "./assets/css/custom-app.css"
+        "styles.css"
       ],
       "scripts": [
         "./assets/lib/material.min.js",

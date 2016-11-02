@@ -39,7 +39,6 @@ export class TweetContainerComponent implements OnInit {
             isRetweeted = false;
         }
 
-        //debugger;
         if(data.extended_entities && data.extended_entities.media.length > 0){
             let mediaLength = data.extended_entities.media.length;
             for(var i=0; i < mediaLength; i++ ){

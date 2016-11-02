@@ -1,7 +1,40 @@
-<span class="mdl-layout-title">Settings Panel</span>
-<nav class="mdl-navigation">
-  <a class="mdl-navigation__link" href="">Link</a>
-  <a class="mdl-navigation__link" href="">Link</a>
-  <a class="mdl-navigation__link" href="">Link</a>
-  <a class="mdl-navigation__link" href="">Link</a>
-</nav>
+
+<div class="mdl-layout-title twt-drawer-header">
+    <span>Settings Panel</span>
+    <i class="material-icons mdl-list__item-icon">settings</i>
+</div>
+<form (ngSubmit)="onSubmit(settingForm)" #settingForm="ngForm">
+    <div class="twt-drawer-body">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input [ngModel]="settings.tweetCount" name="tweetCount" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="tweetCount">
+            <label class="mdl-textfield__label" for="tweetCount">Tweet count</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input [ngModel]="settings.dateFrom" name="dateFrom" class="mdl-textfield__input" type="text" id="dateFrom">
+            <label class="mdl-textfield__label" for="dateFrom">Date from</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input [ngModel]="settings.dateTo" name="dateTo" class="mdl-textfield__input" type="text" id="dateTo">
+            <label class="mdl-textfield__label" for="dateTo">Date to</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input ngModel name="screenName" #screenName (keyup.enter)="addScreenName(screenName.value); screenName.value = ''" class="mdl-textfield__input" type="text" id="screenName">
+            <label class="mdl-textfield__label" for="screenName">Add a screen name</label>
+        </div>
+
+        <div>
+            <span class="mdl-chip mdl-chip--deletable" *ngFor="let screenName of screenNames; let i = index">
+                <span class="mdl-chip__text">{{screenName}}</span>
+                <button type="button" class="mdl-chip__action" (click)="removeScreenName(i);"><i class="material-icons">cancel</i></button>
+            </span>
+        </div>
+
+        <button twtCloseDrawer class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent twt-drawer-submit">
+            Save
+        </button>
+    </div>
+</form>

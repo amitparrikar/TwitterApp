@@ -1,1 +1,7 @@
+<div class="twt-list-header mdl-color--accent">
+
+    <a class="twt-list-title" href="https://twitter.com/{{screenName}}" target="_blank">@{{screenName}}</a>
+    <span class="twt-list-sub-title">{{twitterData[0]?.user?.followers_count}} Followers</span>
+
+</div>
 <twt-tweet-container *ngFor="let tweetItem of twitterData"  [tweetItem]="tweetItem"></twt-tweet-container>
