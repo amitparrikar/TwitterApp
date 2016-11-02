@@ -1,24 +1,53 @@
-<h2>This is an Angular 2 application.</h2>
-<h3>Prerequsite to run this application:</h3>
+# Twitter Application
 
-<h5>Project setup</h5>
-    <ul>
-        <li>Install Nodejs v6.9.1LTS</li>
-        <li><code>git clone https://github.com/amitparrikar/TwitterApp.git</code> or <code>download zip https://github.com/amitparrikar/TwitterApp.git</code></li>
-        <li><code>cd TwitterApp</code></li>
-        <li><code>npm run setup</code></li>
-    </ul>
-    
-<h5>To run in dev mode:</h5>
-    <ul>
-        <li><code>npm run build-dev</code></li>
-        <li><code>npm run start</code></li>
-    </ul>
+#### Introduction
+##### This is a Twitter application which lists the tweets from the accounts which are configured.
+Some of the App feature are:
 
-<h5>To run in prod mode:</h5>
-    <ul>
-        <li><cod>npm run build-prod</code></li>
-        <li><code>npm run start</code></li>    
-    </ul>
+    - Filter panel to set the Tweet count, Date filters, Theme selector, Add/Delete Twitter ScreenNames.
+    - Drag and Reorder list columns to new position.
+    - Use of LocalStorage to save settings.
+    - Mobile first approach.
+    - Material Design CSS.
+    - Select dropdown to navigate to the list
+
+
+#### Technologies used
+    - Angular 2
+    - Typescript
+    - ES6
+    - NodeJS
+    - Material Design
+    - JQuery
+    - HTML5
+    - Angular CLI
+    - Webpack
+    - ExpressJS
+
+#### Application Installation:
+##### Go to `server/config/config.js` file and set the `twitterConfig: { }` object with your Twitter Secret Keys
+##### Project setup
+```sh
+    Install Nodejs v6.9.1LTS
+    $ npm install -g angular-cli
+    $ npm install -g webpack
+    $ git clone https://github.com/amitparrikar/TwitterApp.git `or download zip https://github.com/amitparrikar/TwitterApp/archive/master.zip`
+    $ cd TwitterApp
+    $ npm run setup
+```
+##### To run application in development mode:
+```sh
+    $ npm run build-dev
+    $ npm start
+    Navigate to http://localhost:4000
+```
+##### To run application in production mode:
+```sh
+    $ npm run build-prod
+    $ npm start
+    Navigate to http://localhost:4000
+```
+
+
 
 

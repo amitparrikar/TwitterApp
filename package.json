@@ -6,9 +6,9 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "setup": "npm install -g angular-cli && npm install -g webpack && cd client/ && npm install & cd .. && cd server/ && npm install && cd ..",
-    "build-dev": "cd client/ && ng build --dev && cd ..",
-    "build-prod": "cd client/ && ng build --prod && cd ..",
+    "setup": "cd server/ && npm install && cd ../ && cd client/ && npm install",
+    "build-dev": "cd client/ && ng build --dev",
+    "build-prod": "cd client/ && ng build --prod",
     "start": "cd server/ && node server.js"
   },
   "repository": {
