@@ -2,14 +2,14 @@
 
 #### Introduction
 ##### This is a Twitter application which lists the tweets from the accounts which are configured.
-Some of the App feature are:
+Some of the App features are:
 
     - Filter panel to set the Tweet count, Date filters, Theme selector, Add/Delete Twitter ScreenNames.
     - Drag and Reorder list columns to new position.
     - Use of LocalStorage to save settings.
     - Mobile first approach.
     - Material Design CSS.
-    - Select dropdown to navigate to the list
+    - Select dropdown to navigate to the list.
 
 
 #### Technologies used
@@ -49,5 +49,4 @@ Some of the App feature are:
 ```
 
 
-
-
+###### The App was build on Mac. Windows user please watchout!

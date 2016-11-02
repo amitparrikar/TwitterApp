@@ -9,7 +9,10 @@
         </div>
         <div class="twt-msg-header">
             <span class="screen-name">{{tweet?.displayName}}</span>
-            <span class="username">@{{tweet?.displayScreenName}} - 9h</span>
+            <span>
+                <span class="username">@{{tweet?.displayScreenName}}</span>
+                <span class="tweet-date">on {{tweet?.date | dateFormat}}</span>
+            </span>
         </div>
         <div class="twt-msg-text" [innerHTML]="tweet?.tweetText | tweetText">
         </div>

@@ -23,7 +23,7 @@ export class TweetContainerComponent implements OnInit {
 
     formatTweetItem(data: any){
 
-        let accountName, displayAvatar, displayName, displayScreenName, isRetweeted, tweetText, retweetCount, favoriteCount;
+        let accountName, displayAvatar, displayName, displayScreenName, isRetweeted, tweetText, retweetCount, favoriteCount, date;
         let mediaImages: string[] = [], mediaVideos: MediaVideo[] = [];
 
         if(data.retweeted_status && data.retweeted_status.user){
@@ -62,9 +62,10 @@ export class TweetContainerComponent implements OnInit {
         accountName = data.user.name;
         retweetCount = data.retweet_count;
         favoriteCount = data.favorite_count;
+        date = data.created_at;
 
 
-        this.tweet = new TweetItem(accountName, displayAvatar, displayName, displayScreenName, isRetweeted, tweetText, mediaImages, mediaVideos, retweetCount, favoriteCount);
+        this.tweet = new TweetItem(accountName, displayAvatar, displayName, displayScreenName, isRetweeted, tweetText, mediaImages, mediaVideos, retweetCount, favoriteCount, date);
 
         //console.log(this.tweet);
 

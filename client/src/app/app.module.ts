@@ -14,6 +14,7 @@ import { TweetTextPipe } from './pipes/tweet-text.pipe';
 import { SharedService } from "./services/shared.service";
 import { CloseDrawerDirective } from './directives/close-drawer.directive';
 import { TweetSettingPipe } from './pipes/tweet-setting.pipe';
+import { DateFormatPipe } from './pipes/date-format.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TweetSettingPipe } from './pipes/tweet-setting.pipe';
     TweetListComponent,
     TweetTextPipe,
     CloseDrawerDirective,
-    TweetSettingPipe
+    TweetSettingPipe,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,

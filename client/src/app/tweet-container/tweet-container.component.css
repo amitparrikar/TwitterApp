@@ -33,6 +33,10 @@
     font-size: 10px;
     color: gray;
 }
+.twt-msg-header .tweet-date{
+    font-size: 7px;
+    color: gray;
+}
 
 .twt-msg-footer{
     text-align: left;
