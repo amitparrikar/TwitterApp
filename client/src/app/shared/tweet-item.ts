@@ -13,7 +13,8 @@ export class TweetItem{
         public mediaImages: string[],
         public mediaVideos: MediaVideo[],
         public retweetCount: number,
-        public favoriteCount: number
+        public favoriteCount: number,
+        public date: string
     ){
 
     }
