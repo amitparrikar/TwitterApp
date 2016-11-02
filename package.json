@@ -1,0 +1,29 @@
+{
+  "name": "twitterapp",
+  "version": "1.0.0",
+  "description": "This application has a Node server and a Angular2 frontend. it displays the tweets from various configured accounts.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "setup": "npm install -g angular-cli && npm install -g webpack && cd client/ && npm install & cd .. && cd server/ && npm install && cd ..",
+    "build-dev": "cd client/ && ng build --dev && cd ..",
+    "build-prod": "cd client/ && ng build --prod && cd ..",
+    "start": "cd server/ && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitparrikar/TwitterApp.git"
+  },
+  "keywords": [
+    "angular2",
+    "nodejs",
+    "twitter"
+  ],
+  "author": "Amit Parrikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitparrikar/TwitterApp/issues"
+  },
+  "homepage": "https://github.com/amitparrikar/TwitterApp#readme"
+}
