@@ -47,7 +47,7 @@ export class DrawerComponent implements OnInit {
         this.screenNames = this.sharedService.getAllScreenNames();
 
         this.settings.dateFrom = new Date();
-        this.settings.dateFrom.setMonth(this.settings.dateFrom.getMonth() - 1);
+        this.settings.dateFrom.setMonth(this.settings.dateFrom.getMonth() - 5);
         this.settings.dateFrom = this.settings.dateFrom.toLocaleDateString('en-US');
         this.settings.dateTo = (new Date()).toLocaleDateString('en-US');
 
