@@ -12,6 +12,7 @@ import { TweetContainerComponent } from './tweet-container/tweet-container.compo
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetTextPipe } from './pipes/tweet-text.pipe';
 import { SharedService } from "./services/shared.service";
+import { CloseDrawerDirective } from './directives/close-drawer.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedService } from "./services/shared.service";
     AppBodyComponent,
     TweetContainerComponent,
     TweetListComponent,
-    TweetTextPipe
+    TweetTextPipe,
+    CloseDrawerDirective
   ],
   imports: [
     BrowserModule,

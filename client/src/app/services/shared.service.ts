@@ -1,14 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Input, Output } from '@angular/core';
 
 @Injectable()
 export class SharedService {
 
-  constructor() {
-      //Set the initial screennames if not present.
-      if(!this.getLocalStorageItem('screenNames')){
-          window.localStorage.setItem('screenNames', 'appdirect,techrunch,amitparrikar')
-      }
-  }
+    @Output()
+    refreshPage = new EventEmitter();
+
+    constructor() {
+        //Set the initial screennames if not present.
+        if(!this.getLocalStorageItem('screenNames')){
+            this.saveAllScreenNames(["appdirect", "techcrunch", "laughingsquid"])
+        }
+
+        if(!this.getLocalStorageItem('settings')){
+            this.saveAllSettings({tweetCount: 20, dateFrom: "", dateTo: ""});
+        }
+    }
 
     getAllScreenNames(){
         return this.getLocalStorageItem('screenNames').split(',');
@@ -16,6 +23,16 @@ export class SharedService {
 
     saveAllScreenNames(screenNames: string[]){
         this.saveToLocalStorage('screenNames', screenNames.join(','));
+        this.refreshApplication();
+    }
+
+    getAllSettings(){
+        return this.getLocalStorageItem('settings');
+    }
+
+    saveAllSettings(settings: any){
+        this.saveToLocalStorage('settings', JSON.stringify(settings));
+        this.refreshApplication();
     }
 
     /**
@@ -44,5 +61,12 @@ export class SharedService {
         }
 
         return "";
+    }
+
+    /**
+     * Refresh the application. emit the the event so that the application refreshes itself.
+     */
+    refreshApplication(){
+        this.refreshPage.emit(true);
     }
 }

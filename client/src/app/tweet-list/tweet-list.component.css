@@ -1,0 +1,26 @@
+.twt-list-header{
+    position: relative;
+    margin: -10px -10px 10px -10px;
+    height: 40px;
+    border-radius: 5px 5px 0px 0px;
+    cursor: auto;
+}
+
+.twt-list-title{
+    float: left;
+    margin: 8px 5px 5px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-rendering: geometricPrecision;
+    text-decoration: none;
+}
+
+.twt-list-sub-title{
+    float: right;
+    margin: 20px 5px 0px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-rendering: geometricPrecision;
+}

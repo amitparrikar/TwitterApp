@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from "../services/shared.service";
 
 @Component({
   selector: 'twt-header-dropdown',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderDropdownComponent implements OnInit {
 
-  constructor() { }
+    screenNames: string[] = [];
 
-  ngOnInit() {
-  }
+    constructor(private sharedService: SharedService) { }
 
+    ngOnInit() {
+
+        this.refreshComponent();
+
+        this.sharedService.refreshPage.subscribe( data => this.refreshComponent());
+    }
+
+    refreshComponent(){
+        this.screenNames = this.sharedService.getAllScreenNames();
+    }
 }

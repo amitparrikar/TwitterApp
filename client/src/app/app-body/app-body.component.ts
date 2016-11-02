@@ -20,7 +20,9 @@ export class AppBodyComponent implements OnInit {
     }
     ngOnInit() {
 
-        this.screenNames = this.sharedService.getAllScreenNames();
+        this.sharedService.refreshPage.subscribe((data) => this.loadApplication());
+
+        this.loadApplication();
 
         $('.flex-container').sortable({
             placeholder: "ui-sortable-placeholder",
@@ -36,6 +38,10 @@ export class AppBodyComponent implements OnInit {
                 this.saveScreenNamesPosition();
             }
         });
+    }
+
+    loadApplication(){
+        this.screenNames = this.sharedService.getAllScreenNames();
     }
 
     rearrangeScreenNames(){
