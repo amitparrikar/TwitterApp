@@ -25,7 +25,6 @@ Some of the App features are:
     - ExpressJS
 
 #### Application Installation:
-##### Go to `server/config/config.js` file and set the `twitterConfig: { }` object with your Twitter Secret Keys
 ##### Project setup
 ```sh
     Install Nodejs v6.9.1LTS
@@ -35,6 +34,8 @@ Some of the App features are:
     $ cd TwitterApp
     $ npm run setup
 ```
+##### Go to `server/config/config.js` file and set the `twitterConfig: { }` object with your Twitter Secret Keys
+
 ##### To run application in development mode:
 ```sh
     $ npm run build-dev
