@@ -34,13 +34,9 @@
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input ngModel name="screenName" #screenName class="mdl-textfield__input" type="text" id="screenName">
+            <input (keydown.enter)="addScreenName($event, screenName.value); screenName.value = ''" ngModel name="screenName" #screenName class="mdl-textfield__input" type="text" id="screenName">
             <label class="mdl-textfield__label" for="screenName">Add a screen name</label>
         </div>
-
-        <button (click)="addScreenName($event, screenName.value); screenName.value = ''" class="twt-add-screenName mdl-button--raised mdl-button--colored">
-            Add
-        </button>
 
         <div class="clear-both"></div>
 

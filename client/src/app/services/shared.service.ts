@@ -13,7 +13,8 @@ export class SharedService {
         }
 
         if(!this.getLocalStorageItem('settings')){
-            this.saveAllSettings({tweetCount: 20, dateFrom: "", dateTo: "", theme: "indigo-pink.min.css"});
+            let newDate = (new Date()).toLocaleDateString('en-US');
+            this.saveAllSettings({tweetCount: 20, dateFrom: "06/01/2016", dateTo: newDate, theme: "indigo-pink.min.css"});
         }
     }
 
