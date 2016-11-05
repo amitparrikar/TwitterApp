@@ -1,5 +1,6 @@
 # Twitter Application
 
+#### Watch app video here: [Twitter App](https://www.youtube.com/watch?v=95v89nOaK3I)
 #### Introduction
 ##### This is a Twitter application which lists the tweets from the accounts which are configured.
 Some of the App features are:
@@ -48,6 +49,5 @@ Some of the App features are:
     $ npm start
     Navigate to http://localhost:4000
 ```
-
 
 ###### The App was build on Mac. Windows user please watchout!
